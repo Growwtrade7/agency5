@@ -19,19 +19,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- ========================================================= -->
-  <!-- META PIXEL - ID: 1022395947354596                        -->
+  <!-- META PIXEL - OFFICIAL IMPLEMENTATION                     -->
   <!-- ========================================================= -->
   <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/fbevents.js";
-      js.async = true;
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    
     !function(f,b,e,v,n,t,s) {
       if(f.fbq)return;
       n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -50,9 +40,6 @@
     <img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1022395947354596&ev=PageView&noscript=1">
   </noscript>
 
-  <!-- ========================================================= -->
-  <!-- STYLES - STYLISH GREEN CTA BUTTON                       -->
-  <!-- ========================================================= -->
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
@@ -105,7 +92,6 @@
     }
     .app>*{position:relative;z-index:1}
     
-    /* ===== LOGO ===== */
     .logo-wrap{display:flex;justify-content:center;margin-bottom:12px}
     .logo{
       width:72px;height:72px;border-radius:50%;overflow:hidden;
@@ -116,7 +102,6 @@
     .logo:hover{transform:scale(1.03)}
     .logo img{width:100%;height:100%;object-fit:cover;display:block}
     
-    /* ===== HEADER ===== */
     .header{text-align:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.04)}
     .header .official-tg{
       font-size:9px;
@@ -165,7 +150,6 @@
     }
     .header .expert-tag i{color:#06b6d4;margin-right:4px}
     
-    /* ===== HERO ===== */
     .hero{text-align:center;margin:6px 0 14px}
     .hero .sub-line{
       font-size:12px;
@@ -175,9 +159,6 @@
     }
     .hero .sub-line strong{color:#06b6d4}
     
-    /* ========================================================= */
-    /* STYLISH GREEN CTA BUTTON - PREMIUM LOOK                  */
-    /* ========================================================= */
     .btn-telegram{
       display:flex;
       justify-content:center;
@@ -203,7 +184,6 @@
       letter-spacing:0.3px;
     }
     
-    /* Shine Effect */
     .btn-telegram::before{
       content:'';
       position:absolute;
@@ -243,7 +223,6 @@
     .btn-telegram .btn-text{font-size:13px;line-height:1.2;text-align:center}
     .btn-telegram .sub-text{display:block;font-size:8px;font-weight:400;opacity:0.8;margin-top:1px;letter-spacing:0.3px}
     
-    /* ===== INDEX LIST ===== */
     .index-section{margin:14px 0 12px}
     .index-section .index-title{
       text-align:center;
@@ -274,7 +253,6 @@
     }
     .index-items .item i{color:#06b6d4;font-size:8px}
     
-    /* ===== FEATURES - RED + BOLD + EMOJIS ===== */
     .features-section{margin:10px 0 12px}
     .feature-item{
       display:flex;
@@ -307,7 +285,6 @@
       margin-right:4px;
     }
     
-    /* ===== BADGE ===== */
     .badge-row{
       display:flex;
       flex-wrap:wrap;
@@ -333,7 +310,6 @@
     .badge-tag.pink{color:#f472b6;border-color:rgba(236,72,153,0.08)}
     .badge-tag.cyan{color:#06b6d4;border-color:rgba(6,182,212,0.08)}
     
-    /* ===== DISCLAIMER ===== */
     .disclaimer{
       margin-top:14px;
       padding:8px 10px;
@@ -346,7 +322,6 @@
     .disclaimer p i{color:#fbbf24;margin-right:2px}
     .disclaimer p strong{color:#8b5cf6;font-weight:600}
     
-    /* ===== FOOTER ===== */
     .footer{
       margin-top:10px;
       text-align:center;
@@ -364,7 +339,6 @@
       font-weight:600;
     }
     
-    /* ===== RESPONSIVE ===== */
     @media (max-width:420px){
       .app{padding:18px 14px 22px;border-radius:24px}
       .header h1{font-size:18px}
@@ -397,7 +371,7 @@
 
   <main class="app" role="main">
     
-    <!-- ===== LOGO ===== -->
+    <!-- LOGO -->
     <div class="logo-wrap">
       <div class="logo">
         <img 
@@ -412,7 +386,7 @@
       </div>
     </div>
 
-    <!-- ===== HEADER ===== -->
+    <!-- HEADER -->
     <header class="header">
       <div class="official-tg"><i class="fa-regular fa-circle-check"></i> OFFICIAL TG</div>
       <h1>
@@ -423,11 +397,11 @@
       <span class="expert-tag"><i class="fa-regular fa-circle-check"></i> Stock Market Expert</span>
     </header>
 
-    <!-- ===== HERO ===== -->
+    <!-- HERO -->
     <section class="hero">
       <div class="sub-line"><i class="fa-regular fa-circle-check"></i> <strong>JOIN TELEGRAM</strong></div>
       
-      <!-- STYLISH GREEN CTA BUTTON -->
+      <!-- CTA BUTTON -->
       <a 
         class="btn-telegram" 
         id="telegramBtn" 
@@ -444,7 +418,7 @@
       </a>
     </section>
 
-    <!-- ===== INDEX LIST ===== -->
+    <!-- INDEX LIST -->
     <section class="index-section">
       <div class="index-title"><i class="fa-regular fa-circle-check"></i> TRADING INDICES</div>
       <div class="index-items">
@@ -455,7 +429,7 @@
       </div>
     </section>
 
-    <!-- ===== FEATURES ===== -->
+    <!-- FEATURES -->
     <section class="features-section">
       <div class="feature-item">
         <span class="check">✅</span>
@@ -487,7 +461,7 @@
       </div>
     </section>
 
-    <!-- ===== BADGES ===== -->
+    <!-- BADGES -->
     <div class="badge-row">
       <span class="badge-tag green"><i class="fa-regular fa-circle-check"></i> SEBI Registered</span>
       <span class="badge-tag gold"><i class="fa-regular fa-bell"></i> 100% Free Channel</span>
@@ -495,7 +469,7 @@
       <span class="badge-tag cyan"><i class="fa-regular fa-users"></i> 20k+ Active Members</span>
     </div>
 
-    <!-- ===== DISCLAIMER ===== -->
+    <!-- DISCLAIMER -->
     <div class="disclaimer">
       <p>
         <i class="fa-regular fa-triangle-exclamation"></i>
@@ -508,7 +482,7 @@
       </p>
     </div>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer class="footer">
       <i class="fa-regular fa-circle-check"></i> 
       <span class="highlight">SUBSCRIBE NOW &amp; GET FREE DAILY PROFIT CALLS</span>
@@ -517,7 +491,7 @@
   </main>
 
   <!-- ========================================================= -->
-  <!-- JAVASCRIPT - 0 ERRORS, 0 BOUNCE                         -->
+  <!-- JAVASCRIPT - ORIGINAL (NO CHANGES)                      -->
   <!-- ========================================================= -->
   <script>
     (function() {
