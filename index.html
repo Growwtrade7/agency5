@@ -19,25 +19,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- ========================================================= -->
-  <!-- META PIXEL - OFFICIAL IMPLEMENTATION                     -->
+  <!-- 🔥 META PIXEL - PERFECT IMPLEMENTATION                   -->
   <!-- ========================================================= -->
   <script>
-    !function(f,b,e,v,n,t,s) {
-      if(f.fbq)return;
-      n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s);
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    // Facebook Pixel - Official Implementation
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
     
+    // Initialize Pixel
     fbq('init', '1022395947354596');
+    
+    // Track PageView
     fbq('track', 'PageView');
-    console.log('✅ Meta Pixel initialized');
+    
+    // Optional: Track ViewContent for better optimization
+    fbq('track', 'ViewContent', {
+      content_name: 'Gujarati Trader Landing',
+      content_category: 'Trading Community'
+    });
+    
+    console.log('✅ Meta Pixel Connected: 1022395947354596');
+    console.log('✅ PageView & ViewContent Tracked');
   </script>
   
+  <!-- Noscript Fallback -->
   <noscript>
     <img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1022395947354596&ev=PageView&noscript=1">
+    <img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1022395947354596&ev=ViewContent&noscript=1">
   </noscript>
 
   <style>
@@ -491,7 +505,7 @@
   </main>
 
   <!-- ========================================================= -->
-  <!-- JAVASCRIPT - ORIGINAL (NO CHANGES)                      -->
+  <!-- 🔥 PERFECT PIXEL TRACKING - CLEAN & RELIABLE             -->
   <!-- ========================================================= -->
   <script>
     (function() {
@@ -509,51 +523,51 @@
         var btn = document.getElementById('telegramBtn');
         var btnText = document.getElementById('btnText');
         var isProcessing = false;
+        var TELEGRAM_URL = 'https://telegram.dog/+NMq7qGvqmd41NGM9';
         
         if (!btn) return;
         
         btn.addEventListener('click', function(e) {
+          // Prevent duplicate clicks
           if (isProcessing) {
             e.preventDefault();
             return;
           }
           
-          // ===== TRACKING - 3 METHODS (0 BOUNCE) =====
+          isProcessing = true;
+          
+          // =========================================================
+          // 🔥 TRACK LEAD EVENT - PERFECT IMPLEMENTATION
+          // =========================================================
           try {
             if (typeof fbq === 'function') {
               fbq('track', 'Lead', {
                 content_name: 'Telegram Subscribe',
-                content_category: 'CTA Click'
+                content_category: 'CTA Click',
+                content_type: 'product',
+                content_ids: ['telegram_join_2024'],
+                value: 0,
+                currency: 'INR'
               });
-              fbq('track', 'PageView');
-              console.log('✅ Meta Pixel: Lead tracked');
+              console.log('✅ Meta Pixel: Lead Event Tracked');
+            } else {
+              console.warn('⚠️ fbq not available');
             }
-          } catch(e) {}
-          
-          // Image Pixel Fallback - PageView
-          try {
-            var img1 = new Image(1, 1);
-            img1.src = 'https://www.facebook.com/tr?id=1022395947354596&ev=PageView&noscript=1&t=' + Date.now();
-            img1.style.display = 'none';
-            document.body.appendChild(img1);
-          } catch(e) {}
-          
-          // Image Pixel Fallback - Lead
-          try {
-            var img2 = new Image(1, 1);
-            img2.src = 'https://www.facebook.com/tr?id=1022395947354596&ev=Lead&noscript=1&t=' + Date.now() + '&r=' + Math.random();
-            img2.style.display = 'none';
-            document.body.appendChild(img2);
-          } catch(e) {}
-          
-          // ===== VISUAL FEEDBACK =====
-          isProcessing = true;
-          btn.classList.add('loading');
-          if (btnText) {
-            btnText.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Opening Telegram...';
+          } catch(e) {
+            console.warn('⚠️ Tracking error:', e.message);
           }
           
-          // ===== RESET =====
+          // =========================================================
+          // VISUAL FEEDBACK
+          // =========================================================
+          btn.classList.add('loading');
+          if (btnText) {
+            btnText.innerHTML = '<span style="display:inline-block;animation:spin 0.7s linear infinite;">⟳</span> Opening Telegram...';
+          }
+          
+          // =========================================================
+          // RESET BUTTON
+          // =========================================================
           setTimeout(function() {
             btn.classList.remove('loading');
             if (btnText) {
@@ -563,9 +577,15 @@
           }, 3000);
         });
         
+        // Prevent double-click
+        btn.addEventListener('dblclick', function(e) {
+          e.preventDefault();
+        });
+        
         console.log('✅ Gujarati Trader Page Ready');
         console.log('✅ Pixel ID: 1022395947354596');
-        console.log('✅ 0 Bounce Rate Guaranteed');
+        console.log('✅ Events: PageView, ViewContent, Lead');
+        console.log('✅ Meta Pixel Helper: All events will be detected');
       });
       
     })();
